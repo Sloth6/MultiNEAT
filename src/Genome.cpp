@@ -3224,7 +3224,7 @@ namespace NEAT
         for (unsigned int i = 0; i < NumNeurons(); i++)
         {
             // Save neuron
-            fprintf(a_file, "Neuron %d %d %3.8f %d %3.8f %3.8f %3.8f %3.8f\n",
+            fprintf(a_file, "Neuron %d %d %3.17f %d %3.17f %3.17f %3.17f %3.17f\n",
                     m_NeuronGenes[i].ID(), static_cast<int>(m_NeuronGenes[i].Type()), m_NeuronGenes[i].SplitY(),
                     static_cast<int>(m_NeuronGenes[i].m_ActFunction), m_NeuronGenes[i].m_A, m_NeuronGenes[i].m_B,
                     m_NeuronGenes[i].m_TimeConstant, m_NeuronGenes[i].m_Bias);
@@ -3234,7 +3234,7 @@ namespace NEAT
         // loop over the connections and save each one
         for (unsigned int i = 0; i < NumLinks(); i++)
         {
-            fprintf(a_file, "Link %d %d %d %d %3.8f\n", m_LinkGenes[i].FromNeuronID(), m_LinkGenes[i].ToNeuronID(),
+            fprintf(a_file, "Link %d %d %d %d %3.17f\n", m_LinkGenes[i].FromNeuronID(), m_LinkGenes[i].ToNeuronID(),
                     m_LinkGenes[i].InnovationID(), static_cast<int>(m_LinkGenes[i].IsRecurrent()),
                     m_LinkGenes[i].GetWeight());
             // TODO write link traits
